@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science And All!</title>
+  <style>
+    body {
+        background-color: #10201c; 
+    }
+</style>
+   <link rel="icon" type="image/png" href="green.png">
+</head>
+<body>
+
+
+
+    <nav class="bg-teal-950">
+        <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <img class="h-12 w-auto" src="green.png" alt="Science And All!">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-teal-950 text-white", Default: "text-teal-900 hover:bg-gray-700 hover:text-white" --> 
+                  <a href="2.html" class="bg-teal-900 text-white rounded-md px-3 py-2 text-sm font-medium home-button" aria-current="page">Home</a>
+                  <a href="news.html" class="text-teal-300 hover:bg-teal-700 hover:text-white rounded-md px-6 py-3 text-sm font-medium">News</a>
+                  <a href="team.html" class="text-teal-300 hover:bg-teal-700 hover:text-white rounded-md px-3 py-3 text-sm font-medium">Team</a>
+                  <a href="contact.html" class="text-teal-300 hover:bg-teal-700 hover:text-white rounded-md px-3 py-3 text-sm font-medium">Contact Us</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+              </button>
+      
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </button>
+                </div>
+      
+                <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-900 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                  <!-- Active: "bg-gray-100", Not Active: "" -->
+                  <a href="#" class="block px-4 py-2 text-sm text-white" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-white" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-white" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+          </div>
+        </div>
+      </nav>
+    
+   
+      <h2 class="bg-black font-bold tracking-tight text-white sm:text-4xl py-2">What's Happening Today?</h2>
+
+
+      
+
+
+
+
+    
+
+
+
+
+
+
+      <section class="text-gray-600 body-font my-6 mx-10">
+        
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-teal-50 p-6 rounded-lg">
+                <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://hips.hearstapps.com/hmg-prod/images/aliens-smell-1574631212.jpg?crop=0.8533333333333334xw:1xh;center,top&resize=1200:*" alt="Image Size 720x400">
+                <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Invention</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Newly Discovered Exoplanet Points to Possibility of Alien Life </h2>
+                <p class="leading-relaxed text-base">Scientists have identified a new exoplanet orbiting a distant star within the habitable zone, raising hopes for finding extraterrestrial life.</p>
+                
+                <a href="news1.html" >Read More..</a>
+        
+                
+                
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-white p-6 rounded-lg">
+                <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://images.newscientist.com/wp-content/uploads/2019/06/06165424/c0462719-cervical_cancer_cell_sem-spl.jpg" alt="Image Size 720x400">
+                <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Medical Research</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Nanoparticles Revolutionize Cancer Therapy</h2>
+                <p class="leading-relaxed text-base"> Researchers have developed nanotechnology-based treatment methods that precisely target cancer cells, promising more effective and less invasive therapies.</p>
+                <a href="news1.html" >Read More..</a>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-white p-6 rounded-lg">
+                <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://miro.medium.com/v2/resize:fit:1358/1*I4eFFZbTdmNF0b16AbRtFA@2x.jpeg" alt="Image Size 720x400">
+                <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Technology</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Quantum Computing Takes a Leap Forward</h2>
+                <p class="leading-relaxed text-base">Quantum computing achieves a milestone with the development of qubits that maintain their quantum state longer than ever before, paving the way for more reliable quantum computers.</p>
+                <a href="news1.html" >Read More..</a>
+            </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-white p-6 rounded-lg">
+                <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://static.scientificamerican.com/sciam/cache/file/EF37310E-B02A-4061-A0B0E4D182C0228C_source.jpg?w=1200" alt="Image Size 720x400">
+                <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Experiment</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Revolutionary Gene Editing Technique Cures Genetic Disorder in Mice</h2>
+                <p class="leading-relaxed text-base">Scientists successfully treat a genetic disorder in mice using an innovative CRISPR-based gene editing technique, offering hope for effective treatments for genetic diseases in humans.</p>
+                <a href="news1.html" >Read More..</a>
+            </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="bg-white p-6 rounded-lg">
+                  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.airedalesprings.co.uk/wp-content/uploads/2016/08/mars-iStock_000026519382_Large-1024x766.jpg" alt="Image Size 720x400">
+                  <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Explore</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Exciting Findings from Martian Exploration</h2>
+                  <p class="leading-relaxed text-base">NASA's Mars rover uncovers compelling evidence suggesting the presence of ancient microbial life on Mars, fueling excitement and speculation about the planet's past habitability.</p>
+                  <a href="news1.html" >Read More..</a>
+                </div>
+              </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="bg-white p-6 rounded-lg">
+                  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://www.cam.ac.uk/sites/www.cam.ac.uk/files/styles/content-885x432/public/news/research/news/gettyimages-1202271610-copy.jpg?itok=Xa7rvJkk" alt="Image Size 720x400">
+                  <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Experiment</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Scientists Unlock Secrets of Memory Formation in the Brain</h2>
+                  <p class="leading-relaxed text-base">Breakthrough research reveals the intricate mechanisms behind memory formation in the brain, shedding light on potential treatments for memory-related disorders such as Alzheimer's disease.</p>
+                  <a href="news1.html" >Read More..</a>
+                </div>
+              </div>  
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="bg-white p-6 rounded-lg">
+                  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/75XN2URNF5II5EKZJGSVC2J75Q.jpg" alt="Image Size 720x400">
+                  <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Technology</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Next Generation Solar Technology</h2>
+                  <p class="leading-relaxed text-base">Researchers develop solar panels capable of generating electricity from ambient heat even during nighttime, offering a promising solution for continuous renewable energy production.</p>
+                  <a href="news1.html" >Read More..</a>
+                </div>
+              </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="bg-white p-6 rounded-lg">
+                  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://futureoflife.org/wp-content/uploads/2015/11/artificial_intelligence_benefits_risk.jpg" alt="Image Size 720x400">
+                  <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">#AI</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">AI Models Forecast Agricultural Challenges</h2>
+                  <p class="leading-relaxed text-base">AI algorithms accurately predict the effects of climate change on global agriculture, helping farmers and policymakers prepare for future challenges and mitigate risks.</p>
+                  <a href="news1.html" >Read More..</a>
+                </div>
+              </div>
+              <div class="xl:w-1/3 md:w-1/2 p-4">
+                <div class="bg-white p-6 rounded-lg">
+                  <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72 rounded w-full object-cover object-center mb-6" src="https://assets-global.website-files.com/5d9667bad4a41e222995e15b/63a1e82cd2032e28395915c3_Mesenchymal%20stem%20cell%20copy.webp" alt="Image Size 720x400">
+                  <h3 class="tracking-widest  text-teal-600  text-xs font-medium title-font">Medical Research</h3>
+                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Stem Cell Breakthrough in Regenerative Medicine</h2>
+                  <p class="leading-relaxed text-base">Scientists make significant progress in stem cell therapy, unlocking potential treatments for previously incurable diseases by harnessing the regenerative capabilities of stem cells to repair damaged tissues and organs.</p>
+                  <a href="news1.html" >Read More..</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+        <div class="flex flex-1 justify-between sm:hidden">
+          <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+          <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+        </div>
+        <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+          <div>
+            <p class="text-sm text-gray-700">
+              Showing
+              <span class="font-medium">1</span>
+              to
+              <span class="font-medium">10</span>
+              of
+              <span class="font-medium">97</span>
+              results
+            </p>
+          </div>
+          <div>
+            <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+              <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                <span class="sr-only">Previous</span>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
+              <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
+              <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+              <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+              <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
+              <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+              <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+              <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+              <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                <span class="sr-only">Next</span>
+                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+
+</body>
